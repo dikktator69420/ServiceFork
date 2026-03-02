@@ -8,4 +8,7 @@ public record OrderLineItem(
         Long quantity,
         Long unitPriceInCents
 ) {
+    public Long priceDifference(){
+        return unitPriceInCents-article.currentPriceInCents();
+    }
 }
